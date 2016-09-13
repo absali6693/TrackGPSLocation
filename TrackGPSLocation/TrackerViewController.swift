@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class TrackerViewController: UIViewController {
+class TrackerViewController: UIViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak private var usernameTestField: UITextField!
     @IBOutlet weak private var urlTestField: UITextField!
@@ -16,6 +19,9 @@ class TrackerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.locationManager.delegate =  self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,20 +35,61 @@ class TrackerViewController: UIViewController {
 
 extension TrackerViewController {
     @IBAction func sendButtonClicked(sender: AnyObject) {
-        callInTime(self.frequencyTextField.text!, url: self.urlTestField.text!)
+        //might need to change
+        NSTimer.scheduledTimerWithTimeInterval(Double(self.frequencyTextField.text!) ?? 2.0, target: self, selector: #selector(TrackerViewController.callInTime), userInfo: nil, repeats: true)
+
     }
     
 }
 
-//MARK:- To delete
+//MARK:- Call to server file method
 
 extension TrackerViewController {
-    func callInTime(time: String, url: String) {
-        NSTimer.scheduledTimerWithTimeInterval(15.0, target: self, selector: #selector(TrackerViewController.callFunction), userInfo: nil, repeats: true)
+    func callInTime() {
+        self.locationManager.startUpdatingLocation()
     }
     
-    func callFunction() {
-        print("Abbas")
+    func sendData(locations: CLLocation) {
+        
+        let sendDataToServer = SendDataToServer()
+        sendDataToServer.sendData(self.usernameTestField.text!, url:self.urlTestField.text!, locations: locations)
     }
+    
 }
 
+
+//MARK:- Delegate for location manager
+
+extension TrackerViewController {
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        let locValue = manager.location
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
+            
+            if (error != nil)
+            {
+                print("Error: " + error!.localizedDescription)
+                return
+            }
+            
+            if placemarks!.count > 0
+            {
+                self.locationManager.stopUpdatingLocation()
+                self.sendData(locValue!)
+            }
+            else
+            {
+                print("Error with the data.")
+            }
+        })
+    }
+    
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print("Error: " + error.localizedDescription)
+    }
+    
+    
+}

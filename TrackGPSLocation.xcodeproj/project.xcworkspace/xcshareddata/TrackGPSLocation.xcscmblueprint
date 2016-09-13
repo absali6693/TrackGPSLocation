@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "CE6252481F69BE30FEB5E7A6E202924E84D54075",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CE6252481F69BE30FEB5E7A6E202924E84D54075" : 0,
+    "CB322105408F108380224A4352B12A6B45982038" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8BF146C3-FA3B-4D77-9777-0FB4C48CABB5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CE6252481F69BE30FEB5E7A6E202924E84D54075" : "TrackGPSLocation\/",
+    "CB322105408F108380224A4352B12A6B45982038" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TrackGPSLocation",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TrackGPSLocation.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/absali6693\/IOSViewConnectivity.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CB322105408F108380224A4352B12A6B45982038"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/absali6693\/trackgpslocation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE6252481F69BE30FEB5E7A6E202924E84D54075"
+    }
+  ]
+}
