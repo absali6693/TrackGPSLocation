@@ -21,17 +21,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gvs-Hl-nrH">
-                                        <rect key="frame" x="20" y="85" width="280" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="WXD-Qr-miJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-vp-12K">
                                         <rect key="frame" x="20" y="47" width="280" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="suN-6X-Y0M"/>
+                                            <constraint firstAttribute="height" constant="30" id="WXD-Qr-miJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -45,15 +37,23 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q8-vp-12K">
+                                        <rect key="frame" x="20" y="85" width="280" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="suN-6X-Y0M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="vSb-ac-zHv" firstAttribute="leading" secondItem="X3e-fM-0vy" secondAttribute="leading" constant="20" id="3Rh-0E-Axx"/>
                                     <constraint firstAttribute="trailing" secondItem="9q8-vp-12K" secondAttribute="trailing" constant="20" id="6GY-OF-EV9"/>
-                                    <constraint firstItem="9q8-vp-12K" firstAttribute="top" secondItem="X3e-fM-0vy" secondAttribute="top" constant="47" id="ZdN-MC-tzF"/>
-                                    <constraint firstItem="vSb-ac-zHv" firstAttribute="top" secondItem="Gvs-Hl-nrH" secondAttribute="bottom" constant="8" id="a4n-VC-fLW"/>
+                                    <constraint firstItem="9q8-vp-12K" firstAttribute="top" secondItem="X3e-fM-0vy" secondAttribute="top" constant="85" id="ZdN-MC-tzF"/>
+                                    <constraint firstItem="vSb-ac-zHv" firstAttribute="top" secondItem="Gvs-Hl-nrH" secondAttribute="bottom" constant="46" id="a4n-VC-fLW"/>
                                     <constraint firstItem="9q8-vp-12K" firstAttribute="leading" secondItem="X3e-fM-0vy" secondAttribute="leading" constant="20" id="gVu-ME-QHT"/>
                                     <constraint firstAttribute="trailing" secondItem="Gvs-Hl-nrH" secondAttribute="trailing" constant="20" id="h5w-9g-sDk"/>
-                                    <constraint firstItem="Gvs-Hl-nrH" firstAttribute="top" secondItem="9q8-vp-12K" secondAttribute="bottom" constant="8" id="lQh-Uk-VAG"/>
+                                    <constraint firstItem="Gvs-Hl-nrH" firstAttribute="top" secondItem="9q8-vp-12K" secondAttribute="bottom" constant="-68" id="lQh-Uk-VAG"/>
                                     <constraint firstItem="Gvs-Hl-nrH" firstAttribute="leading" secondItem="X3e-fM-0vy" secondAttribute="leading" constant="20" id="nub-eZ-cFS"/>
                                 </constraints>
                             </view>
@@ -67,6 +67,9 @@
                                             <constraint firstAttribute="height" constant="30" id="pd9-75-fdX"/>
                                         </constraints>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7iU-UJ-VFv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -88,6 +91,11 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="frequencyTextField" destination="vSb-ac-zHv" id="S7H-Jt-1No"/>
+                        <outlet property="urlTestField" destination="9q8-vp-12K" id="wTx-B3-XIL"/>
+                        <outlet property="usernameTestField" destination="Gvs-Hl-nrH" id="DgP-19-phv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
