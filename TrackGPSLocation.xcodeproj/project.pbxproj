@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11A2F9741D87EEA500701E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9731D87EEA500701E5F /* AppDelegate.swift */; };
-		11A2F9761D87EEA500701E5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9751D87EEA500701E5F /* ViewController.swift */; };
-		11A2F9791D87EEA500701E5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A2F9771D87EEA500701E5F /* Main.storyboard */; };
+		11A2F9761D87EEA500701E5F /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9751D87EEA500701E5F /* TrackerViewController.swift */; };
+		11A2F9791D87EEA500701E5F /* Tracker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A2F9771D87EEA500701E5F /* Tracker.storyboard */; };
 		11A2F97C1D87EEA500701E5F /* TrackGPSLocation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F97A1D87EEA500701E5F /* TrackGPSLocation.xcdatamodeld */; };
 		11A2F97E1D87EEA500701E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A2F97D1D87EEA500701E5F /* Assets.xcassets */; };
 		11A2F9811D87EEA500701E5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A2F97F1D87EEA500701E5F /* LaunchScreen.storyboard */; };
@@ -37,8 +37,8 @@
 /* Begin PBXFileReference section */
 		11A2F9701D87EEA500701E5F /* TrackGPSLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackGPSLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A2F9731D87EEA500701E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11A2F9751D87EEA500701E5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		11A2F9781D87EEA500701E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11A2F9751D87EEA500701E5F /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
+		11A2F9781D87EEA500701E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tracker.storyboard; sourceTree = "<group>"; };
 		11A2F97B1D87EEA500701E5F /* TrackGPSLocation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackGPSLocation.xcdatamodel; sourceTree = "<group>"; };
 		11A2F97D1D87EEA500701E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A2F9801D87EEA500701E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				11A2F9731D87EEA500701E5F /* AppDelegate.swift */,
-				11A2F9751D87EEA500701E5F /* ViewController.swift */,
-				11A2F9771D87EEA500701E5F /* Main.storyboard */,
+				11A2F9751D87EEA500701E5F /* TrackerViewController.swift */,
+				11A2F9771D87EEA500701E5F /* Tracker.storyboard */,
 				11A2F97D1D87EEA500701E5F /* Assets.xcassets */,
 				11A2F97F1D87EEA500701E5F /* LaunchScreen.storyboard */,
 				11A2F9821D87EEA500701E5F /* Info.plist */,
@@ -234,7 +234,7 @@
 			files = (
 				11A2F9811D87EEA500701E5F /* LaunchScreen.storyboard in Resources */,
 				11A2F97E1D87EEA500701E5F /* Assets.xcassets in Resources */,
-				11A2F9791D87EEA500701E5F /* Main.storyboard in Resources */,
+				11A2F9791D87EEA500701E5F /* Tracker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11A2F97C1D87EEA500701E5F /* TrackGPSLocation.xcdatamodeld in Sources */,
-				11A2F9761D87EEA500701E5F /* ViewController.swift in Sources */,
+				11A2F9761D87EEA500701E5F /* TrackerViewController.swift in Sources */,
 				11A2F9741D87EEA500701E5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,12 +297,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		11A2F9771D87EEA500701E5F /* Main.storyboard */ = {
+		11A2F9771D87EEA500701E5F /* Tracker.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				11A2F9781D87EEA500701E5F /* Base */,
 			);
-			name = Main.storyboard;
+			name = Tracker.storyboard;
 			sourceTree = "<group>";
 		};
 		11A2F97F1D87EEA500701E5F /* LaunchScreen.storyboard */ = {
