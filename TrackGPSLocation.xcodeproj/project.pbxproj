@@ -17,6 +17,7 @@
 		11A2F9971D87EEA600701E5F /* TrackGPSLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9961D87EEA600701E5F /* TrackGPSLocationUITests.swift */; };
 		11A2F9A51D880CA300701E5F /* SendDataToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9A41D880CA300701E5F /* SendDataToServer.swift */; };
 		11A2F9A71D880F9B00701E5F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A2F9A61D880F9B00701E5F /* CoreLocation.framework */; };
+		11A2F9E61D884DB300701E5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9E51D884DB300701E5F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		11A2F9981D87EEA600701E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11A2F9A41D880CA300701E5F /* SendDataToServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataToServer.swift; sourceTree = "<group>"; };
 		11A2F9A61D880F9B00701E5F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		11A2F9E51D884DB300701E5F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				11A2F9731D87EEA500701E5F /* AppDelegate.swift */,
 				11A2F9751D87EEA500701E5F /* TrackerViewController.swift */,
 				11A2F9A41D880CA300701E5F /* SendDataToServer.swift */,
+				11A2F9E51D884DB300701E5F /* Constants.swift */,
 				11A2F9771D87EEA500701E5F /* Tracker.storyboard */,
 				11A2F97D1D87EEA500701E5F /* Assets.xcassets */,
 				11A2F97F1D87EEA500701E5F /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A2F9E61D884DB300701E5F /* Constants.swift in Sources */,
 				11A2F97C1D87EEA500701E5F /* TrackGPSLocation.xcdatamodeld in Sources */,
 				11A2F9761D87EEA500701E5F /* TrackerViewController.swift in Sources */,
 				11A2F9741D87EEA500701E5F /* AppDelegate.swift in Sources */,
@@ -494,6 +498,7 @@
 				11A2F99D1D87EEA600701E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11A2F99E1D87EEA600701E5F /* Build configuration list for PBXNativeTarget "TrackGPSLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				11A2F9A01D87EEA600701E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11A2F9A11D87EEA600701E5F /* Build configuration list for PBXNativeTarget "TrackGPSLocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +516,7 @@
 				11A2F9A31D87EEA600701E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
