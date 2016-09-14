@@ -17,4 +17,8 @@ struct GlobalConstants {
     static let course = "course"
     static let timestamp = "timestamp"
     static let username = "username"
+    static let location_data = "location_data"
+    static let device_type = "device_type"
+    static let verticalAccuracy = "verticalAccuracy"
+    static let horizontalAccuracy = "horizontalAccuracy"
 }
