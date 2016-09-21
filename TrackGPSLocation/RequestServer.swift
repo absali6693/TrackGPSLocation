@@ -37,11 +37,10 @@ class RequestServer: NSObject {
                 // Print what we got from the call
                 print("POST: " + postString)
             }
-            
         }).resume()
         
         
     }
-
-
+    
+    
 }

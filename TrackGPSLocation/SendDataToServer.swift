@@ -13,15 +13,14 @@ class SendDataToServer: NSObject{
     
     
     func sendData(username: String, url: String,locations: CLLocation) {
+        let urlRequest = "http://" + url + "location_data"
         let locValue:CLLocationCoordinate2D = locations.coordinate
         let formatter = NSDateFormatter()
         formatter.dateFormat = GlobalConstants.dateFormat
         let timestamp: String = formatter.stringFromDate(locations.timestamp)
-        print(locations.verticalAccuracy)
-        print(locations.horizontalAccuracy)
         let locationData : [String: AnyObject] = [GlobalConstants.latitude: locValue.latitude, GlobalConstants.longitiude: locValue.longitude, GlobalConstants.speed: locations.speed, GlobalConstants.altitude: locations.altitude, GlobalConstants.course: locations.course, GlobalConstants.timestamp: timestamp, GlobalConstants.verticalAccuracy: locations.verticalAccuracy, GlobalConstants.horizontalAccuracy: locations.horizontalAccuracy]
         let postParams : [String: AnyObject] = [GlobalConstants.username: username, GlobalConstants.device_type: "IOS", GlobalConstants.location_data: locationData]
-        RequestServer.requestURL(url, typeOfMethod: "POST", postParams: postParams)
+        RequestServer.requestURL(urlRequest, typeOfMethod: "POST", postParams: postParams)
     }
     
 }

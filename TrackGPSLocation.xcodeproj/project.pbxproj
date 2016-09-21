@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		119FA3891D893846000A9E86 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119FA3881D893846000A9E86 /* MapViewController.swift */; };
+		119FA38B1D89410D000A9E86 /* GPSLocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119FA38A1D89410C000A9E86 /* GPSLocationTracker.swift */; };
 		11A2F9741D87EEA500701E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9731D87EEA500701E5F /* AppDelegate.swift */; };
 		11A2F9761D87EEA500701E5F /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A2F9751D87EEA500701E5F /* TrackerViewController.swift */; };
 		11A2F9791D87EEA500701E5F /* Tracker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A2F9771D87EEA500701E5F /* Tracker.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		119FA3881D893846000A9E86 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		119FA38A1D89410C000A9E86 /* GPSLocationTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSLocationTracker.swift; sourceTree = "<group>"; };
 		11A2F9701D87EEA500701E5F /* TrackGPSLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackGPSLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A2F9731D87EEA500701E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A2F9751D87EEA500701E5F /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			children = (
 				11A2F9731D87EEA500701E5F /* AppDelegate.swift */,
 				11A2F9751D87EEA500701E5F /* TrackerViewController.swift */,
+				119FA38A1D89410C000A9E86 /* GPSLocationTracker.swift */,
+				119FA3881D893846000A9E86 /* MapViewController.swift */,
 				11A2F9A41D880CA300701E5F /* SendDataToServer.swift */,
 				11A2F9E71D88565300701E5F /* RequestServer.swift */,
 				11A2F9E51D884DB300701E5F /* Constants.swift */,
@@ -209,6 +215,7 @@
 				TargetAttributes = {
 					11A2F96F1D87EEA500701E5F = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 823E67E42L;
 					};
 					11A2F9861D87EEA600701E5F = {
 						CreatedOnToolsVersion = 7.3;
@@ -274,10 +281,12 @@
 			files = (
 				11A2F9E81D88565300701E5F /* RequestServer.swift in Sources */,
 				11A2F9E61D884DB300701E5F /* Constants.swift in Sources */,
+				119FA38B1D89410D000A9E86 /* GPSLocationTracker.swift in Sources */,
 				11A2F97C1D87EEA500701E5F /* TrackGPSLocation.xcdatamodeld in Sources */,
 				11A2F9761D87EEA500701E5F /* TrackerViewController.swift in Sources */,
 				11A2F9741D87EEA500701E5F /* AppDelegate.swift in Sources */,
 				11A2F9A51D880CA300701E5F /* SendDataToServer.swift in Sources */,
+				119FA3891D893846000A9E86 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TrackGPSLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GrepRuby.TrackGPSLocation;
@@ -430,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TrackGPSLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GrepRuby.TrackGPSLocation;

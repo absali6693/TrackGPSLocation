@@ -28,6 +28,7 @@
                                         </state>
                                         <connections>
                                             <action selector="sendButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7iU-UJ-VFv"/>
+                                            <segue destination="2FM-oz-ZuQ" kind="presentation" identifier="toMapSegue" id="HP1-hY-T0O"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -94,7 +95,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="301"/>
+            <point key="canvasLocation" x="306" y="186"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="k00-jD-Gvq">
+            <objects>
+                <viewController id="2FM-oz-ZuQ" customClass="MapViewController" customModule="TrackGPSLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oYZ-a7-wx5"/>
+                        <viewControllerLayoutGuide type="bottom" id="0sV-WJ-LzN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z8k-V3-UOE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OIJ-Bj-tzU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIe-0V-BGb">
+                                <rect key="frame" x="20" y="28" width="40" height="35"/>
+                                <state key="normal" image="1474030963_circle-back-arrow-glyph"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="dke-3B-yoN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OIJ-Bj-tzU" firstAttribute="top" secondItem="Z8k-V3-UOE" secondAttribute="top" id="DDg-Zf-cLB"/>
+                            <constraint firstAttribute="trailing" secondItem="OIJ-Bj-tzU" secondAttribute="trailing" id="qUv-AY-l4R"/>
+                            <constraint firstItem="OIJ-Bj-tzU" firstAttribute="leading" secondItem="Z8k-V3-UOE" secondAttribute="leading" id="ymP-f3-pNf"/>
+                            <constraint firstItem="0sV-WJ-LzN" firstAttribute="top" secondItem="OIJ-Bj-tzU" secondAttribute="bottom" id="zPX-1d-1M3"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="OIJ-Bj-tzU" id="Qvq-NX-byg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrd-Ch-IE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="663" y="186"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1474030963_circle-back-arrow-glyph" width="32" height="32"/>
+    </resources>
 </document>
